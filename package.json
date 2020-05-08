@@ -1,0 +1,45 @@
+{
+  "name": "typescript-scratch",
+  "version": "1.0.0",
+  "description": "Typescript scratch",
+  "main": "./lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "lint": "tslint -c tslint.json src/**/*.ts",
+    "prepublish": "npm run build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/convert-units": "^2.3.1",
+    "@types/jest": "^25.2.1",
+    "convert-units": "^2.3.4",
+    "tslint": "^6.1.2",
+    "typescript": "^3.8.3"
+  },
+  "files": [
+    "./bin/*",
+    "./lib/*"
+  ],
+  "typings": "./lib/index.d.ts",
+  "devDependencies": {
+    "jest": "^26.0.1",
+    "ts-jest": "^25.5.0"
+  },
+  "jest": {
+    "transform": {
+      "^.+\\.tsx?$": "ts-jest"
+    },
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "tsx",
+      "json",
+      "node"
+    ],
+    "testPathIgnorePatterns": [
+      "/dist/"
+    ]
+  }
+}
